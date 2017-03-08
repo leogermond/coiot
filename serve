@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dir=$(dirname $(readlink -en $0))
+echo -en "\033]0;Jekyll $dir\007"
+bundle exec jekyll serve -s $dir
