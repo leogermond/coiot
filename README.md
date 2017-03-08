@@ -1,6 +1,3 @@
-# coiot.github.io
-COIoT Technical documentation
-
 # FAQ
 
 ## What does COIoT stand for
