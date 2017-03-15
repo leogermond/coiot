@@ -17,9 +17,9 @@ some of them, making them __mandatory__.
 
 The service MUST implement the following characteristics:
 
-- Manufacturer Name String
-- Model Number String
-- Serial Number String
+- Manufacturer Name String (UUID 0x2A29)
+- Model Number String (UUID 0x2A24)
+- Serial Number String (UUID 0x2A25)
 
 These caracteristics' values SHOULD NOT change during the life of the product.
 
@@ -46,7 +46,7 @@ short "bar #5e6f" and allow for sorting by eg manufacturer or model.
 
 The device MAY implement the following characteristic:
 
-- Software Revision String
+- Software Revision String (UUID 0x2A28)
 
 When set, the format of this string May be of the form *M.n[/r]* where **M** is the major
 version, **n** the minor version, **r** an implementation-dependent revision number.
