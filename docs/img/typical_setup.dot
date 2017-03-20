@@ -1,0 +1,11 @@
+graph {
+	rankdir=LR;
+	node [ style=filled, color=lightgreen ];
+
+	Internet [ color=pink ];
+        Gateway [ color=gold ];
+	Internet -- Gateway [label=HTTP];
+	Gateway -- "Device 1" [label=BLE, color=blue];
+	Gateway -- "Device 2" [label=BLE, color=blue];
+	"Device 2" -- "Device 3" [label=BLE, color=blue];
+}
