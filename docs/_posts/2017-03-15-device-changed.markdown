@@ -28,29 +28,17 @@ clear it could arise.
 This added to the fact that you can not foresee a change in attributes, makes that any device
 that supports software updates MUST support the *Service Change* attribute. That in turn makes
 the support for *Characteristic Value Indication* mandatory.
-(§4.2 of [[1]](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=421043))
-
-As a consequence, any device MUST have support for *Characteristic Value Indication* and
-enable indication in its Client Configuration Characteristic Descriptor.
-(§7.1 of [[1]](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=421043))
-
-After an update a device MUST successfully indicate any change to any trusted connections it
-maintains so that they can update their cache. It SHOULD NOT indicate a change if no service
-were changed, added, or removed.
+(§4.2 of GATT in [[1]](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=421043))
 
 # Example
 
 A device has an update to a new major version that gives access to its battery informations,
 to offer this supports the updated firmware adds the Battery Service and associated characteristics.
-After the update has been applied, the 
 
 # Testing
 
 - A device has a *Software Revision Number* in its *Device Information Service*: it can therefore
 be updated, and must have the *Service Changed* characteristic.
-- A device is updated to a version that brings a change to its attributes, with a previously connected
-gateway. The gateway must receive an indication as soon as possible. Once the indication is acquitted,
-it should not be sent again.
 
 # References
 
